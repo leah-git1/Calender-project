@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-calendar-search"
+version = "1.0.0"
+description = "An O(N log N) interval merging calendar search engine with CLI, SOLID architecture, and fallback analytics."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Leah Cohen" }
+]
+# The core application uses only Python's standard library!
+dependencies = [] 
+
+[project.optional-dependencies]
+# Dependencies needed only for running the tests
+test = [
+    "pytest>=7.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
